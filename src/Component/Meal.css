@@ -1,0 +1,120 @@
+.meal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.mealCard{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  
+    grid-gap: 6px;
+    max-width: 80%;
+    max-height: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+.cardIngredients{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, 0.9);
+    color: #ffffff !important;
+   
+    text-align: justify;
+    font-size: small;
+    padding: 20px;
+}
+
+.cardIngredients.dnone{
+    display: none;
+}
+
+.show{
+    z-index: 100;
+    fill: #ffffff;
+}
+
+.cardIngredientsElements{
+  
+    color: #ffffff;
+}
+
+#root > div > div > div > div:nth-child(1) > div > div.MuiCardContent-root.cardIngredients > p > p{
+    margin: 0;
+}
+#root > div > div > div > div:nth-child(1) > div > div.MuiCardContent-root.cardIngredients{
+
+}
+
+#root > div > div > div > div > div > div > div.MuiCardContent-root.cardIngredients > p > div{
+    display: absolute;
+    top: 4px;
+    left: 4px;
+}
+#root > div > div > div > span > div > div > div > span > p{
+    margin-bottom: 3px;
+}
+
+#root > div > div > div > span > div > div > div > span > h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: blueviolet;
+}
+
+.cardMealInstrucions{
+    text-align: justify !important;
+    opacity: 0.8;
+}
+
+.home-link {
+    cursor: pointer;
+    transition: .6s ease-in-out;
+    opacity: 0.6;
+    padding: 6px 0;
+    margin: 6px 0;
+ }
+ .home-link:hover{
+ opacity: 1;
+ }
+ .random-link {
+    cursor: pointer;
+    transition: .6s ease-in-out;
+    opacity: 0.6;
+    padding: 6px;
+    margin-bottom: 6px;
+ }
+ .random-link:hover{
+ opacity: 1;
+ }
+
+
+ .mealInfo{
+     opacity: 0.8;
+     font-size: 0.8rem;
+ }
+
+/* MEDIA QUERY  */
+@media (max-width: 880px){
+    .mealCard{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px){
+    .mealCard{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px){
+    .mealCard{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
